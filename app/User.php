@@ -28,4 +28,8 @@ class User extends Authenticatable
     {
         return $this ->hasMany('App\MyAsset');
     }
+    public function categories()
+    {
+        return $this ->hasMany('App\Categories');
+    }
 }

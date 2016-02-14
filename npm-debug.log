@@ -1,0 +1,786 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'yo',
+1 verbose cli   'grunt-cli',
+1 verbose cli   'generator-aspnet',
+1 verbose cli   'bower' ]
+2 info using npm@2.14.7
+3 info using node@v4.2.1
+4 verbose install initial load of /usr/local/lib/package.json
+5 verbose readDependencies loading dependencies from /usr/local/lib/package.json
+6 silly cache add args [ 'yo', null ]
+7 verbose cache add spec yo
+8 silly cache add args [ 'grunt-cli', null ]
+9 verbose cache add spec grunt-cli
+10 silly cache add args [ 'generator-aspnet', null ]
+11 verbose cache add spec generator-aspnet
+12 silly cache add args [ 'bower', null ]
+13 verbose cache add spec bower
+14 silly cache add parsed spec Result {
+14 silly cache add   raw: 'yo',
+14 silly cache add   scope: null,
+14 silly cache add   name: 'yo',
+14 silly cache add   rawSpec: '',
+14 silly cache add   spec: '*',
+14 silly cache add   type: 'range' }
+15 silly addNamed yo@*
+16 verbose addNamed "*" is a valid semver range for yo
+17 silly addNameRange { name: 'yo', range: '*', hasData: false }
+18 silly mapToRegistry name yo
+19 silly mapToRegistry using default registry
+20 silly mapToRegistry registry https://registry.npmjs.org/
+21 silly mapToRegistry uri https://registry.npmjs.org/yo
+22 verbose addNameRange registry:https://registry.npmjs.org/yo not in flight; fetching
+23 silly cache add parsed spec Result {
+23 silly cache add   raw: 'grunt-cli',
+23 silly cache add   scope: null,
+23 silly cache add   name: 'grunt-cli',
+23 silly cache add   rawSpec: '',
+23 silly cache add   spec: '*',
+23 silly cache add   type: 'range' }
+24 silly addNamed grunt-cli@*
+25 verbose addNamed "*" is a valid semver range for grunt-cli
+26 silly addNameRange { name: 'grunt-cli', range: '*', hasData: false }
+27 silly mapToRegistry name grunt-cli
+28 silly mapToRegistry using default registry
+29 silly mapToRegistry registry https://registry.npmjs.org/
+30 silly mapToRegistry uri https://registry.npmjs.org/grunt-cli
+31 verbose addNameRange registry:https://registry.npmjs.org/grunt-cli not in flight; fetching
+32 silly cache add parsed spec Result {
+32 silly cache add   raw: 'generator-aspnet',
+32 silly cache add   scope: null,
+32 silly cache add   name: 'generator-aspnet',
+32 silly cache add   rawSpec: '',
+32 silly cache add   spec: '*',
+32 silly cache add   type: 'range' }
+33 silly addNamed generator-aspnet@*
+34 verbose addNamed "*" is a valid semver range for generator-aspnet
+35 silly addNameRange { name: 'generator-aspnet', range: '*', hasData: false }
+36 silly mapToRegistry name generator-aspnet
+37 silly mapToRegistry using default registry
+38 silly mapToRegistry registry https://registry.npmjs.org/
+39 silly mapToRegistry uri https://registry.npmjs.org/generator-aspnet
+40 verbose addNameRange registry:https://registry.npmjs.org/generator-aspnet not in flight; fetching
+41 silly cache add parsed spec Result {
+41 silly cache add   raw: 'bower',
+41 silly cache add   scope: null,
+41 silly cache add   name: 'bower',
+41 silly cache add   rawSpec: '',
+41 silly cache add   spec: '*',
+41 silly cache add   type: 'range' }
+42 silly addNamed bower@*
+43 verbose addNamed "*" is a valid semver range for bower
+44 silly addNameRange { name: 'bower', range: '*', hasData: false }
+45 silly mapToRegistry name bower
+46 silly mapToRegistry using default registry
+47 silly mapToRegistry registry https://registry.npmjs.org/
+48 silly mapToRegistry uri https://registry.npmjs.org/bower
+49 verbose addNameRange registry:https://registry.npmjs.org/bower not in flight; fetching
+50 verbose request uri https://registry.npmjs.org/yo
+51 verbose request no auth needed
+52 info attempt registry request try #1 at 16:10:04
+53 verbose request id 27754724620b5c5b
+54 http request GET https://registry.npmjs.org/yo
+55 verbose request uri https://registry.npmjs.org/generator-aspnet
+56 verbose request no auth needed
+57 info attempt registry request try #1 at 16:10:04
+58 http request GET https://registry.npmjs.org/generator-aspnet
+59 verbose request uri https://registry.npmjs.org/grunt-cli
+60 verbose request no auth needed
+61 info attempt registry request try #1 at 16:10:04
+62 verbose etag "CKF6LR7MBM8UA93FM2XEOVG8U"
+63 http request GET https://registry.npmjs.org/grunt-cli
+64 verbose request uri https://registry.npmjs.org/bower
+65 verbose request no auth needed
+66 info attempt registry request try #1 at 16:10:04
+67 verbose etag "3N0SX3O9Q67L77F1RM55YLDQP"
+68 http request GET https://registry.npmjs.org/bower
+69 http 200 https://registry.npmjs.org/grunt-cli
+70 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+70 verbose headers   etag: '"B9FLMDRM1PL9ML10IAVJQVJYU"',
+70 verbose headers   'content-type': 'application/json',
+70 verbose headers   'cache-control': 'max-age=300',
+70 verbose headers   'content-length': '24084',
+70 verbose headers   'accept-ranges': 'bytes',
+70 verbose headers   date: 'Sat, 13 Feb 2016 08:10:05 GMT',
+70 verbose headers   via: '1.1 varnish',
+70 verbose headers   age: '100',
+70 verbose headers   connection: 'keep-alive',
+70 verbose headers   'x-served-by': 'cache-hkg6823-HKG',
+70 verbose headers   'x-cache': 'HIT',
+70 verbose headers   'x-cache-hits': '1',
+70 verbose headers   'x-timer': 'S1455351005.042667,VS0,VE0',
+70 verbose headers   vary: 'Accept' }
+71 silly get cb [ 200,
+71 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+71 silly get     etag: '"B9FLMDRM1PL9ML10IAVJQVJYU"',
+71 silly get     'content-type': 'application/json',
+71 silly get     'cache-control': 'max-age=300',
+71 silly get     'content-length': '24084',
+71 silly get     'accept-ranges': 'bytes',
+71 silly get     date: 'Sat, 13 Feb 2016 08:10:05 GMT',
+71 silly get     via: '1.1 varnish',
+71 silly get     age: '100',
+71 silly get     connection: 'keep-alive',
+71 silly get     'x-served-by': 'cache-hkg6823-HKG',
+71 silly get     'x-cache': 'HIT',
+71 silly get     'x-cache-hits': '1',
+71 silly get     'x-timer': 'S1455351005.042667,VS0,VE0',
+71 silly get     vary: 'Accept' } ]
+72 verbose get saving grunt-cli to /Users/EGGROLL/.npm/registry.npmjs.org/grunt-cli/.cache.json
+73 silly addNameRange number 2 { name: 'grunt-cli', range: '*', hasData: true }
+74 silly addNameRange versions [ 'grunt-cli',
+74 silly addNameRange   [ '0.1.0',
+74 silly addNameRange     '0.1.1',
+74 silly addNameRange     '0.1.2',
+74 silly addNameRange     '0.1.3',
+74 silly addNameRange     '0.1.4',
+74 silly addNameRange     '0.1.5',
+74 silly addNameRange     '0.1.6',
+74 silly addNameRange     '0.1.7',
+74 silly addNameRange     '0.1.8',
+74 silly addNameRange     '0.1.9',
+74 silly addNameRange     '0.1.10',
+74 silly addNameRange     '0.1.11',
+74 silly addNameRange     '0.1.12',
+74 silly addNameRange     '0.1.13',
+74 silly addNameRange     '1.0.0-rc1' ] ]
+75 silly addNamed grunt-cli@0.1.13
+76 verbose addNamed "0.1.13" is a plain semver version for grunt-cli
+77 silly cache afterAdd grunt-cli@0.1.13
+78 verbose afterAdd /Users/EGGROLL/.npm/grunt-cli/0.1.13/package/package.json not in flight; writing
+79 verbose afterAdd /Users/EGGROLL/.npm/grunt-cli/0.1.13/package/package.json written
+80 http 200 https://registry.npmjs.org/bower
+81 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+81 verbose headers   etag: '"A2YHGT0SP72GI7ZIL962RRRZW"',
+81 verbose headers   'content-type': 'application/json',
+81 verbose headers   'cache-control': 'max-age=300',
+81 verbose headers   'content-length': '168950',
+81 verbose headers   'accept-ranges': 'bytes',
+81 verbose headers   date: 'Sat, 13 Feb 2016 08:10:05 GMT',
+81 verbose headers   via: '1.1 varnish',
+81 verbose headers   age: '159',
+81 verbose headers   connection: 'keep-alive',
+81 verbose headers   'x-served-by': 'cache-hkg6822-HKG',
+81 verbose headers   'x-cache': 'HIT',
+81 verbose headers   'x-cache-hits': '2',
+81 verbose headers   'x-timer': 'S1455351005.041003,VS0,VE0',
+81 verbose headers   vary: 'Accept' }
+82 silly get cb [ 200,
+82 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+82 silly get     etag: '"A2YHGT0SP72GI7ZIL962RRRZW"',
+82 silly get     'content-type': 'application/json',
+82 silly get     'cache-control': 'max-age=300',
+82 silly get     'content-length': '168950',
+82 silly get     'accept-ranges': 'bytes',
+82 silly get     date: 'Sat, 13 Feb 2016 08:10:05 GMT',
+82 silly get     via: '1.1 varnish',
+82 silly get     age: '159',
+82 silly get     connection: 'keep-alive',
+82 silly get     'x-served-by': 'cache-hkg6822-HKG',
+82 silly get     'x-cache': 'HIT',
+82 silly get     'x-cache-hits': '2',
+82 silly get     'x-timer': 'S1455351005.041003,VS0,VE0',
+82 silly get     vary: 'Accept' } ]
+83 verbose get saving bower to /Users/EGGROLL/.npm/registry.npmjs.org/bower/.cache.json
+84 silly addNameRange number 2 { name: 'bower', range: '*', hasData: true }
+85 silly addNameRange versions [ 'bower',
+85 silly addNameRange   [ '0.1.0',
+85 silly addNameRange     '0.1.2',
+85 silly addNameRange     '0.1.3',
+85 silly addNameRange     '0.2.0',
+85 silly addNameRange     '0.3.0',
+85 silly addNameRange     '0.3.1',
+85 silly addNameRange     '0.3.2',
+85 silly addNameRange     '0.4.0',
+85 silly addNameRange     '0.5.0',
+85 silly addNameRange     '0.5.1',
+85 silly addNameRange     '0.6.0',
+85 silly addNameRange     '0.6.1',
+85 silly addNameRange     '0.6.2',
+85 silly addNameRange     '0.6.3',
+85 silly addNameRange     '0.6.4',
+85 silly addNameRange     '0.6.5',
+85 silly addNameRange     '0.6.6',
+85 silly addNameRange     '0.6.7',
+85 silly addNameRange     '0.6.8',
+85 silly addNameRange     '0.7.0',
+85 silly addNameRange     '0.7.1',
+85 silly addNameRange     '0.8.0',
+85 silly addNameRange     '0.8.1',
+85 silly addNameRange     '0.8.2',
+85 silly addNameRange     '0.8.3',
+85 silly addNameRange     '0.8.4',
+85 silly addNameRange     '0.8.5',
+85 silly addNameRange     '0.8.6',
+85 silly addNameRange     '0.9.0',
+85 silly addNameRange     '0.9.1',
+85 silly addNameRange     '0.9.2',
+85 silly addNameRange     '0.10.0',
+85 silly addNameRange     '1.0.0',
+85 silly addNameRange     '1.0.1',
+85 silly addNameRange     '1.0.2',
+85 silly addNameRange     '1.0.3',
+85 silly addNameRange     '1.1.0',
+85 silly addNameRange     '1.1.1',
+85 silly addNameRange     '1.1.2',
+85 silly addNameRange     '1.2.0',
+85 silly addNameRange     '1.2.1',
+85 silly addNameRange     '1.2.2',
+85 silly addNameRange     '1.2.3',
+85 silly addNameRange     '1.2.4',
+85 silly addNameRange     '1.2.5',
+85 silly addNameRange     '1.2.6',
+85 silly addNameRange     '1.2.7',
+85 silly addNameRange     '1.2.8',
+85 silly addNameRange     '1.3.0',
+85 silly addNameRange     '1.3.1',
+85 silly addNameRange     '1.3.2',
+85 silly addNameRange     '1.3.3',
+85 silly addNameRange     '1.3.4',
+85 silly addNameRange     '1.3.5',
+85 silly addNameRange     '1.3.6',
+85 silly addNameRange     '1.3.7',
+85 silly addNameRange     '1.3.8',
+85 silly addNameRange     '1.3.9',
+85 silly addNameRange     '1.3.10',
+85 silly addNameRange     '1.3.11',
+85 silly addNameRange     '1.3.12',
+85 silly addNameRange     '1.4.0',
+85 silly addNameRange     '1.4.1',
+85 silly addNameRange     '1.5.0',
+85 silly addNameRange     '1.5.1',
+85 silly addNameRange     '1.5.2',
+85 silly addNameRange     '1.5.3',
+85 silly addNameRange     '1.6.2',
+85 silly addNameRange     '1.6.3',
+85 silly addNameRange     '1.6.4',
+85 silly addNameRange     '1.6.5',
+85 silly addNameRange     '1.5.4',
+85 silly addNameRange     '1.4.2',
+85 silly addNameRange     '1.6.6',
+85 silly addNameRange     '1.6.7',
+85 silly addNameRange     '1.6.8',
+85 silly addNameRange     '1.6.9',
+85 silly addNameRange     '1.7.0',
+85 silly addNameRange     '1.7.1',
+85 silly addNameRange     '1.7.2',
+85 silly addNameRange     '1.7.5',
+85 silly addNameRange     '1.7.6',
+85 silly addNameRange     '1.7.7' ] ]
+86 silly addNamed bower@1.7.7
+87 verbose addNamed "1.7.7" is a plain semver version for bower
+88 silly cache afterAdd bower@1.7.7
+89 verbose afterAdd /Users/EGGROLL/.npm/bower/1.7.7/package/package.json not in flight; writing
+90 verbose afterAdd /Users/EGGROLL/.npm/bower/1.7.7/package/package.json written
+91 http 200 https://registry.npmjs.org/yo
+92 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+92 verbose headers   etag: '"60MQAT6GCN2GUZ92ESZHKHO8"',
+92 verbose headers   'content-type': 'application/json',
+92 verbose headers   'cache-control': 'max-age=300',
+92 verbose headers   'content-length': '44915',
+92 verbose headers   'accept-ranges': 'bytes',
+92 verbose headers   date: 'Sat, 13 Feb 2016 08:10:05 GMT',
+92 verbose headers   via: '1.1 varnish',
+92 verbose headers   age: '0',
+92 verbose headers   connection: 'keep-alive',
+92 verbose headers   'x-served-by': 'cache-hkg6820-HKG',
+92 verbose headers   'x-cache': 'HIT',
+92 verbose headers   'x-cache-hits': '1',
+92 verbose headers   'x-timer': 'S1455351005.043789,VS0,VE836',
+92 verbose headers   vary: 'Accept' }
+93 silly get cb [ 200,
+93 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+93 silly get     etag: '"60MQAT6GCN2GUZ92ESZHKHO8"',
+93 silly get     'content-type': 'application/json',
+93 silly get     'cache-control': 'max-age=300',
+93 silly get     'content-length': '44915',
+93 silly get     'accept-ranges': 'bytes',
+93 silly get     date: 'Sat, 13 Feb 2016 08:10:05 GMT',
+93 silly get     via: '1.1 varnish',
+93 silly get     age: '0',
+93 silly get     connection: 'keep-alive',
+93 silly get     'x-served-by': 'cache-hkg6820-HKG',
+93 silly get     'x-cache': 'HIT',
+93 silly get     'x-cache-hits': '1',
+93 silly get     'x-timer': 'S1455351005.043789,VS0,VE836',
+93 silly get     vary: 'Accept' } ]
+94 verbose get saving yo to /Users/EGGROLL/.npm/registry.npmjs.org/yo/.cache.json
+95 silly addNameRange number 2 { name: 'yo', range: '*', hasData: true }
+96 silly addNameRange versions [ 'yo',
+96 silly addNameRange   [ '1.1.0',
+96 silly addNameRange     '1.1.1',
+96 silly addNameRange     '1.1.2',
+96 silly addNameRange     '1.2.0',
+96 silly addNameRange     '1.2.1',
+96 silly addNameRange     '1.3.0',
+96 silly addNameRange     '1.3.2',
+96 silly addNameRange     '1.3.3',
+96 silly addNameRange     '1.4.1',
+96 silly addNameRange     '1.4.2',
+96 silly addNameRange     '1.4.4',
+96 silly addNameRange     '1.4.5',
+96 silly addNameRange     '1.4.6',
+96 silly addNameRange     '1.4.7',
+96 silly addNameRange     '1.4.8',
+96 silly addNameRange     '1.5.0',
+96 silly addNameRange     '1.5.1',
+96 silly addNameRange     '1.6.0' ] ]
+97 silly addNamed yo@1.6.0
+98 verbose addNamed "1.6.0" is a plain semver version for yo
+99 silly mapToRegistry name yo
+100 silly mapToRegistry using default registry
+101 silly mapToRegistry registry https://registry.npmjs.org/
+102 silly mapToRegistry uri https://registry.npmjs.org/yo
+103 verbose addRemoteTarball https://registry.npmjs.org/yo/-/yo-1.6.0.tgz not in flight; adding
+104 verbose addRemoteTarball [ 'https://registry.npmjs.org/yo/-/yo-1.6.0.tgz',
+104 verbose addRemoteTarball   '67a3ca07e0880bc9fa3651892af4c5d2a95fcd0b' ]
+105 info retry fetch attempt 1 at 16:10:06
+106 info attempt registry request try #1 at 16:10:06
+107 http fetch GET https://registry.npmjs.org/yo/-/yo-1.6.0.tgz
+108 http 200 https://registry.npmjs.org/generator-aspnet
+109 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+109 verbose headers   etag: '"6Z5EHM2ZJSHFDVJ3TCQ5VOG9Q"',
+109 verbose headers   'content-type': 'application/json',
+109 verbose headers   'cache-control': 'max-age=300',
+109 verbose headers   'content-length': '88004',
+109 verbose headers   'accept-ranges': 'bytes',
+109 verbose headers   date: 'Sat, 13 Feb 2016 08:10:06 GMT',
+109 verbose headers   via: '1.1 varnish',
+109 verbose headers   age: '0',
+109 verbose headers   connection: 'keep-alive',
+109 verbose headers   'x-served-by': 'cache-hkg6827-HKG',
+109 verbose headers   'x-cache': 'MISS',
+109 verbose headers   'x-cache-hits': '0',
+109 verbose headers   'x-timer': 'S1455351005.040502,VS0,VE1004',
+109 verbose headers   vary: 'Accept' }
+110 silly get cb [ 200,
+110 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+110 silly get     etag: '"6Z5EHM2ZJSHFDVJ3TCQ5VOG9Q"',
+110 silly get     'content-type': 'application/json',
+110 silly get     'cache-control': 'max-age=300',
+110 silly get     'content-length': '88004',
+110 silly get     'accept-ranges': 'bytes',
+110 silly get     date: 'Sat, 13 Feb 2016 08:10:06 GMT',
+110 silly get     via: '1.1 varnish',
+110 silly get     age: '0',
+110 silly get     connection: 'keep-alive',
+110 silly get     'x-served-by': 'cache-hkg6827-HKG',
+110 silly get     'x-cache': 'MISS',
+110 silly get     'x-cache-hits': '0',
+110 silly get     'x-timer': 'S1455351005.040502,VS0,VE1004',
+110 silly get     vary: 'Accept' } ]
+111 verbose get saving generator-aspnet to /Users/EGGROLL/.npm/registry.npmjs.org/generator-aspnet/.cache.json
+112 silly addNameRange number 2 { name: 'generator-aspnet', range: '*', hasData: true }
+113 silly addNameRange versions [ 'generator-aspnet',
+113 silly addNameRange   [ '0.0.0',
+113 silly addNameRange     '0.0.1',
+113 silly addNameRange     '0.0.2',
+113 silly addNameRange     '0.0.4',
+113 silly addNameRange     '0.0.5',
+113 silly addNameRange     '0.0.6',
+113 silly addNameRange     '0.0.7',
+113 silly addNameRange     '0.0.8',
+113 silly addNameRange     '0.0.9',
+113 silly addNameRange     '0.0.10',
+113 silly addNameRange     '0.0.11',
+113 silly addNameRange     '0.0.12',
+113 silly addNameRange     '0.0.13',
+113 silly addNameRange     '0.0.14',
+113 silly addNameRange     '0.0.18',
+113 silly addNameRange     '0.0.19',
+113 silly addNameRange     '0.0.20',
+113 silly addNameRange     '0.0.21',
+113 silly addNameRange     '0.0.22',
+113 silly addNameRange     '0.0.23',
+113 silly addNameRange     '0.0.24',
+113 silly addNameRange     '0.0.25',
+113 silly addNameRange     '0.0.26',
+113 silly addNameRange     '0.0.27',
+113 silly addNameRange     '0.0.28',
+113 silly addNameRange     '0.0.29',
+113 silly addNameRange     '0.0.30',
+113 silly addNameRange     '0.0.31',
+113 silly addNameRange     '0.0.32',
+113 silly addNameRange     '0.0.33',
+113 silly addNameRange     '0.0.34',
+113 silly addNameRange     '0.0.35',
+113 silly addNameRange     '0.0.36',
+113 silly addNameRange     '0.0.50',
+113 silly addNameRange     '0.0.60',
+113 silly addNameRange     '0.0.71',
+113 silly addNameRange     '0.0.72',
+113 silly addNameRange     '0.0.73',
+113 silly addNameRange     '0.0.74',
+113 silly addNameRange     '0.0.75',
+113 silly addNameRange     '0.0.80',
+113 silly addNameRange     '0.0.81',
+113 silly addNameRange     '0.0.90',
+113 silly addNameRange     '0.0.91',
+113 silly addNameRange     '0.0.92',
+113 silly addNameRange     '0.0.93' ] ]
+114 silly addNamed generator-aspnet@0.0.93
+115 verbose addNamed "0.0.93" is a plain semver version for generator-aspnet
+116 silly mapToRegistry name generator-aspnet
+117 silly mapToRegistry using default registry
+118 silly mapToRegistry registry https://registry.npmjs.org/
+119 silly mapToRegistry uri https://registry.npmjs.org/generator-aspnet
+120 verbose addRemoteTarball https://registry.npmjs.org/generator-aspnet/-/generator-aspnet-0.0.93.tgz not in flight; adding
+121 verbose addRemoteTarball [ 'https://registry.npmjs.org/generator-aspnet/-/generator-aspnet-0.0.93.tgz',
+121 verbose addRemoteTarball   '24080ae4f99ae5701f8578379cd43cae19d4a13c' ]
+122 info retry fetch attempt 1 at 16:10:06
+123 info attempt registry request try #1 at 16:10:06
+124 http fetch GET https://registry.npmjs.org/generator-aspnet/-/generator-aspnet-0.0.93.tgz
+125 http fetch 200 https://registry.npmjs.org/yo/-/yo-1.6.0.tgz
+126 silly fetchAndShaCheck shasum 67a3ca07e0880bc9fa3651892af4c5d2a95fcd0b
+127 verbose addTmpTarball /var/folders/jg/2qx55ks530l_3qg3v__pxc540000gn/T/npm-37228-f3e0831f/registry.npmjs.org/yo/-/yo-1.6.0.tgz not in flight; adding
+128 verbose addTmpTarball already have metadata; skipping unpack for yo@1.6.0
+129 silly cache afterAdd yo@1.6.0
+130 verbose afterAdd /Users/EGGROLL/.npm/yo/1.6.0/package/package.json not in flight; writing
+131 verbose afterAdd /Users/EGGROLL/.npm/yo/1.6.0/package/package.json written
+132 http fetch 200 https://registry.npmjs.org/generator-aspnet/-/generator-aspnet-0.0.93.tgz
+133 silly fetchAndShaCheck shasum 24080ae4f99ae5701f8578379cd43cae19d4a13c
+134 verbose addTmpTarball /var/folders/jg/2qx55ks530l_3qg3v__pxc540000gn/T/npm-37228-f3e0831f/registry.npmjs.org/generator-aspnet/-/generator-aspnet-0.0.93.tgz not in flight; adding
+135 verbose addTmpTarball already have metadata; skipping unpack for generator-aspnet@0.0.93
+136 silly cache afterAdd generator-aspnet@0.0.93
+137 verbose afterAdd /Users/EGGROLL/.npm/generator-aspnet/0.0.93/package/package.json not in flight; writing
+138 verbose afterAdd /Users/EGGROLL/.npm/generator-aspnet/0.0.93/package/package.json written
+139 silly install resolved [ { name: 'grunt-cli',
+139 silly install resolved     description: 'The grunt command line interface.',
+139 silly install resolved     version: '0.1.13',
+139 silly install resolved     author: { name: 'Grunt Team' },
+139 silly install resolved     homepage: 'http://gruntjs.com/',
+139 silly install resolved     repository: { type: 'git', url: 'git://github.com/gruntjs/grunt-cli.git' },
+139 silly install resolved     bugs: { url: 'http://github.com/gruntjs/grunt-cli/issues' },
+139 silly install resolved     licenses: [ [Object] ],
+139 silly install resolved     bin: { grunt: 'bin/grunt' },
+139 silly install resolved     engines: { node: '>= 0.8.0' },
+139 silly install resolved     scripts: { test: 'node bin/grunt test' },
+139 silly install resolved     preferGlobal: true,
+139 silly install resolved     dependencies: { nopt: '~1.0.10', 'findup-sync': '~0.1.0', resolve: '~0.3.1' },
+139 silly install resolved     devDependencies: { grunt: '~0.4.0', 'grunt-contrib-jshint': '~0.2.0' },
+139 silly install resolved     contributors: [ [Object], [Object], [Object], [Object] ],
+139 silly install resolved     _id: 'grunt-cli@0.1.13',
+139 silly install resolved     dist:
+139 silly install resolved      { shasum: 'e9ebc4047631f5012d922770c39378133cad10f4',
+139 silly install resolved        tarball: 'http://registry.npmjs.org/grunt-cli/-/grunt-cli-0.1.13.tgz' },
+139 silly install resolved     _from: 'grunt-cli@*',
+139 silly install resolved     _npmVersion: '1.3.24',
+139 silly install resolved     _npmUser: { name: 'tkellen', email: 'tyler@sleekcode.net' },
+139 silly install resolved     maintainers: [ [Object] ],
+139 silly install resolved     directories: {},
+139 silly install resolved     _shasum: 'e9ebc4047631f5012d922770c39378133cad10f4',
+139 silly install resolved     _resolved: 'https://registry.npmjs.org/grunt-cli/-/grunt-cli-0.1.13.tgz',
+139 silly install resolved     readme: 'ERROR: No README data found!' },
+139 silly install resolved   { name: 'bower',
+139 silly install resolved     version: '1.7.7',
+139 silly install resolved     description: 'The browser package manager',
+139 silly install resolved     author: { name: 'Twitter' },
+139 silly install resolved     license: 'MIT',
+139 silly install resolved     repository: { type: 'git', url: 'git+https://github.com/bower/bower.git' },
+139 silly install resolved     main: 'lib',
+139 silly install resolved     bin: { bower: 'bin/bower' },
+139 silly install resolved     homepage: 'http://bower.io',
+139 silly install resolved     engines: { node: '>=0.10.0' },
+139 silly install resolved     keywords: [ 'bower' ],
+139 silly install resolved     files: [ 'bin', 'lib' ],
+139 silly install resolved     bugs: { url: 'https://github.com/bower/bower/issues' },
+139 silly install resolved     _id: 'bower@1.7.7',
+139 silly install resolved     scripts: {},
+139 silly install resolved     _shasum: '2fd7ff3ebdcba5a8ffcd84c397c8fdfe9f825f92',
+139 silly install resolved     _from: 'bower@*',
+139 silly install resolved     _npmVersion: '3.5.3',
+139 silly install resolved     _nodeVersion: '4.1.1',
+139 silly install resolved     _npmUser: { name: 'sheerun', email: 'sheerun@sher.pl' },
+139 silly install resolved     dist:
+139 silly install resolved      { shasum: '2fd7ff3ebdcba5a8ffcd84c397c8fdfe9f825f92',
+139 silly install resolved        tarball: 'http://registry.npmjs.org/bower/-/bower-1.7.7.tgz' },
+139 silly install resolved     maintainers:
+139 silly install resolved      [ [Object],
+139 silly install resolved        [Object],
+139 silly install resolved        [Object],
+139 silly install resolved        [Object],
+139 silly install resolved        [Object],
+139 silly install resolved        [Object],
+139 silly install resolved        [Object] ],
+139 silly install resolved     directories: {},
+139 silly install resolved     _resolved: 'https://registry.npmjs.org/bower/-/bower-1.7.7.tgz',
+139 silly install resolved     readme: 'ERROR: No README data found!' },
+139 silly install resolved   { name: 'yo',
+139 silly install resolved     version: '1.6.0',
+139 silly install resolved     description: 'CLI tool for running Yeoman generators',
+139 silly install resolved     homepage: 'https://github.com/yeoman/yo#readme',
+139 silly install resolved     author: { name: 'Yeoman' },
+139 silly install resolved     files: [ 'lib' ],
+139 silly install resolved     main: 'lib/index.js',
+139 silly install resolved     keywords:
+139 silly install resolved      [ 'cli-app',
+139 silly install resolved        'cli',
+139 silly install resolved        'front-end',
+139 silly install resolved        'development',
+139 silly install resolved        'dev',
+139 silly install resolved        'build',
+139 silly install resolved        'web',
+139 silly install resolved        'tool',
+139 silly install resolved        'scaffold',
+139 silly install resolved        'stack',
+139 silly install resolved        'yeoman',
+139 silly install resolved        'generator',
+139 silly install resolved        'generate',
+139 silly install resolved        'app',
+139 silly install resolved        'boilerplate' ],
+139 silly install resolved     license: 'BSD-2-Clause',
+139 silly install resolved     repository: { type: 'git', url: 'git+https://github.com/yeoman/yo.git' },
+139 silly install resolved     bin: { yo: 'lib/cli.js' },
+139 silly install resolved     engines: { node: '>=0.12.0' },
+139 silly install resolved     scripts:
+139 silly install resolved      { test: 'gulp',
+139 silly install resolved        postinstall: 'yodoctor',
+139 silly install resolved        postupdate: 'yodoctor',
+139 silly install resolved        prepublish: 'gulp prepublish' },
+139 silly install resolved     dependencies:
+139 silly install resolved      { async: '^1.0.0',
+139 silly install resolved        chalk: '^1.0.0',
+139 silly install resolved        configstore: '^1.0.0',
+139 silly install resolved        'cross-spawn-async': '^2.0.0',
+139 silly install resolved        figures: '^1.3.5',
+139 silly install resolved        fullname: '^2.0.0',
+139 silly install resolved        got: '^5.0.0',
+139 silly install resolved        'humanize-string': '^1.0.0',
+139 silly install resolved        inquirer: '^0.11.0',
+139 silly install resolved        insight: '^0.7.0',
+139 silly install resolved        lodash: '^3.2.0',
+139 silly install resolved        meow: '^3.0.0',
+139 silly install resolved        'npm-keyword': '^4.1.0',
+139 silly install resolved        opn: '^3.0.2',
+139 silly install resolved        'package-json': '^2.1.0',
+139 silly install resolved        'read-pkg-up': '^1.0.1',
+139 silly install resolved        repeating: '^2.0.0',
+139 silly install resolved        'root-check': '^1.0.0',
+139 silly install resolved        'sort-on': '^1.0.0',
+139 silly install resolved        'string-length': '^1.0.0',
+139 silly install resolved        titleize: '^1.0.0',
+139 silly install resolved        'update-notifier': '^0.6.0',
+139 silly install resolved        'user-home': '^2.0.0',
+139 silly install resolved        'yeoman-character': '^1.0.0',
+139 silly install resolved        'yeoman-doctor': '^2.0.0',
+139 silly install resolved        'yeoman-environment': '^1.5.0',
+139 silly install resolved        yosay: '^1.0.0' },
+139 silly install resolved     devDependencies:
+139 silly install resolved      { mocha: '^2.1.0',
+139 silly install resolved        mockery: '^1.4.0',
+139 silly install resolved        nock: '^2.0.1',
+139 silly install resolved        nsp: '^2.2.0',
+139 silly install resolved        proxyquire: '^1.0.1',
+139 silly install resolved        'registry-url': '^3.0.0',
+139 silly install resolved        sinon: '^1.12.1',
+139 silly install resolved        gulp: '^3.6.0',
+139 silly install resolved        'gulp-eslint': '^1.0.0',
+139 silly install resolved        'gulp-exclude-gitignore': '^1.0.0',
+139 silly install resolved        'gulp-istanbul': '^0.9.0',
+139 silly install resolved        'gulp-mocha': '^2.0.0',
+139 silly install resolved        'gulp-plumber': '^1.0.0',
+139 silly install resolved        'gulp-nsp': '^2.1.0',
+139 silly install resolved        'gulp-coveralls': '^0.1.0' },
+139 silly install resolved     gitHead: '23cd3dc3268d82466afe78b17819f4cbe518afcd',
+139 silly install resolved     bugs: { url: 'https://github.com/yeoman/yo/issues' },
+139 silly install resolved     _id: 'yo@1.6.0',
+139 silly install resolved     _shasum: '67a3ca07e0880bc9fa3651892af4c5d2a95fcd0b',
+139 silly install resolved     _from: 'yo@*',
+139 silly install resolved     _npmVersion: '3.5.3',
+139 silly install resolved     _nodeVersion: '5.2.0',
+139 silly install resolved     _npmUser: { name: 'sboudrias', email: 'admin@simonboudrias.com' },
+139 silly install resolved     dist:
+139 silly install resolved      { shasum: '67a3ca07e0880bc9fa3651892af4c5d2a95fcd0b',
+139 silly install resolved        tarball: 'http://registry.npmjs.org/yo/-/yo-1.6.0.tgz' },
+139 silly install resolved     maintainers:
+139 silly install resolved      [ [Object],
+139 silly install resolved        [Object],
+139 silly install resolved        [Object],
+139 silly install resolved        [Object],
+139 silly install resolved        [Object],
+139 silly install resolved        [Object],
+139 silly install resolved        [Object] ],
+139 silly install resolved     directories: {},
+139 silly install resolved     _resolved: 'https://registry.npmjs.org/yo/-/yo-1.6.0.tgz' },
+139 silly install resolved   { name: 'generator-aspnet',
+139 silly install resolved     version: '0.0.93',
+139 silly install resolved     description: 'Yeoman generator for ASP.NET 5 apps',
+139 silly install resolved     license: 'Apache-2.0',
+139 silly install resolved     main: 'app/index.js',
+139 silly install resolved     repository:
+139 silly install resolved      { type: 'git',
+139 silly install resolved        url: 'git+https://github.com/omnisharp/generator-aspnet.git' },
+139 silly install resolved     contributors: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+139 silly install resolved     engines: { node: '>=0.10.0' },
+139 silly install resolved     keywords:
+139 silly install resolved      [ 'yeoman-generator',
+139 silly install resolved        'ASP.NET',
+139 silly install resolved        'aspnet',
+139 silly install resolved        'ASP',
+139 silly install resolved        'net',
+139 silly install resolved        'vNext',
+139 silly install resolved        'dnx' ],
+139 silly install resolved     dependencies:
+139 silly install resolved      { chai: '^3.3.0',
+139 silly install resolved        chalk: '^1.0.0',
+139 silly install resolved        'findup-sync': '^0.3.0',
+139 silly install resolved        nconf: '^0.8.2',
+139 silly install resolved        uuid: '^2.0.1',
+139 silly install resolved        vs_projectname: '^1.0.0',
+139 silly install resolved        'yeoman-generator': '^0.19.0',
+139 silly install resolved        yosay: '^1.0.0' },
+139 silly install resolved     devDependencies: { mkdirp: '^0.5.1', mocha: '^2.3.3' },
+139 silly install resolved     scripts: { test: './node_modules/mocha/bin/mocha ./test' },
+139 silly install resolved     gitHead: '3569caf42f8ed4e276d28a8b89476ce1e24efb07',
+139 silly install resolved     bugs: { url: 'https://github.com/omnisharp/generator-aspnet/issues' },
+139 silly install resolved     homepage: 'https://github.com/omnisharp/generator-aspnet#readme',
+139 silly install resolved     _id: 'generator-aspnet@0.0.93',
+139 silly install resolved     _shasum: '24080ae4f99ae5701f8578379cd43cae19d4a13c',
+139 silly install resolved     _from: 'generator-aspnet@*',
+139 silly install resolved     _npmVersion: '3.7.1',
+139 silly install resolved     _nodeVersion: '0.10.42',
+139 silly install resolved     _npmUser: { name: 'sayedha', email: 'sayed.hashimi@gmail.com' },
+139 silly install resolved     dist:
+139 silly install resolved      { shasum: '24080ae4f99ae5701f8578379cd43cae19d4a13c',
+139 silly install resolved        tarball: 'http://registry.npmjs.org/generator-aspnet/-/generator-aspnet-0.0.93.tgz' },
+139 silly install resolved     maintainers: [ [Object], [Object] ],
+139 silly install resolved     _npmOperationalInternal:
+139 silly install resolved      { host: 'packages-6-west.internal.npmjs.com',
+139 silly install resolved        tmp: 'tmp/generator-aspnet-0.0.93.tgz_1455210262797_0.9925384831149131' },
+139 silly install resolved     directories: {},
+139 silly install resolved     _resolved: 'https://registry.npmjs.org/generator-aspnet/-/generator-aspnet-0.0.93.tgz' } ]
+140 info install grunt-cli@0.1.13 into /usr/local/lib
+141 info install bower@1.7.7 into /usr/local/lib
+142 info install yo@1.6.0 into /usr/local/lib
+143 info install generator-aspnet@0.0.93 into /usr/local/lib
+144 info installOne grunt-cli@0.1.13
+145 verbose installOne of grunt-cli to /usr/local/lib not in flight; installing
+146 info installOne bower@1.7.7
+147 verbose installOne of bower to /usr/local/lib not in flight; installing
+148 info installOne yo@1.6.0
+149 verbose installOne of yo to /usr/local/lib not in flight; installing
+150 info installOne generator-aspnet@0.0.93
+151 verbose installOne of generator-aspnet to /usr/local/lib not in flight; installing
+152 verbose lock using /Users/EGGROLL/.npm/_locks/grunt-cli-58f484dab06f0a30.lock for /usr/local/lib/node_modules/grunt-cli
+153 verbose lock using /Users/EGGROLL/.npm/_locks/bower-e8debc5417026b57.lock for /usr/local/lib/node_modules/bower
+154 verbose lock using /Users/EGGROLL/.npm/_locks/generator-aspnet-b9cbfe278f2983cc.lock for /usr/local/lib/node_modules/generator-aspnet
+155 verbose lock using /Users/EGGROLL/.npm/_locks/yo-c80abb7e04f27e35.lock for /usr/local/lib/node_modules/yo
+156 silly install write writing generator-aspnet 0.0.93 to /usr/local/lib/node_modules/generator-aspnet
+157 silly install write writing yo 1.6.0 to /usr/local/lib/node_modules/yo
+158 silly install write writing grunt-cli 0.1.13 to /usr/local/lib/node_modules/grunt-cli
+159 silly install write writing bower 1.7.7 to /usr/local/lib/node_modules/bower
+160 verbose unbuild lib/node_modules/generator-aspnet
+161 verbose unbuild lib/node_modules/yo
+162 verbose unbuild lib/node_modules/grunt-cli
+163 verbose unbuild lib/node_modules/bower
+164 silly gentlyRm /usr/local/lib/node_modules/generator-aspnet is being purged from base /usr/local
+165 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/generator-aspnet
+166 verbose tar unpack /Users/EGGROLL/.npm/generator-aspnet/0.0.93/package.tgz
+167 verbose tar unpacking to /usr/local/lib/node_modules/generator-aspnet
+168 silly gentlyRm /usr/local/lib/node_modules/generator-aspnet is being purged
+169 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/generator-aspnet
+170 silly gentlyRm /usr/local/lib/node_modules/yo is being purged from base /usr/local
+171 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/yo
+172 silly gunzTarPerm modes [ '755', '644' ]
+173 verbose tar unpack /Users/EGGROLL/.npm/yo/1.6.0/package.tgz
+174 verbose tar unpacking to /usr/local/lib/node_modules/yo
+175 silly gentlyRm /usr/local/lib/node_modules/yo is being purged
+176 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/yo
+177 silly gunzTarPerm modes [ '755', '644' ]
+178 info preuninstall bower@1.7.7
+179 info uninstall bower@1.7.7
+180 error tar.unpack untar error /Users/EGGROLL/.npm/generator-aspnet/0.0.93/package.tgz
+181 verbose unbuild rmStuff bower@1.7.7 from /usr/local/lib/node_modules
+182 silly gentlyRm /usr/local/bin/bower is being gently removed
+183 silly gentlyRm verifying /usr/local is an npm working directory
+184 error tar.unpack untar error /Users/EGGROLL/.npm/yo/1.6.0/package.tgz
+185 verbose unlock done using /Users/EGGROLL/.npm/_locks/generator-aspnet-b9cbfe278f2983cc.lock for /usr/local/lib/node_modules/generator-aspnet
+186 silly gentlyRm containing path /usr/local is under npm's control, in /usr/local
+187 silly gentlyRm deletion target /usr/local/bin/bower is under /usr/local
+188 verbose gentlyRm vacuuming from /usr/local/bin/bower up to /usr/local
+189 info preuninstall grunt-cli@0.1.13
+190 verbose unlock done using /Users/EGGROLL/.npm/_locks/yo-c80abb7e04f27e35.lock for /usr/local/lib/node_modules/yo
+191 silly vacuum-fs removing /usr/local/bin/bower
+192 info uninstall grunt-cli@0.1.13
+193 silly vacuum-fs quitting because other entries in /usr/local/bin
+194 info postuninstall bower@1.7.7
+195 verbose unbuild rmStuff grunt-cli@0.1.13 from /usr/local/lib/node_modules
+196 silly gentlyRm /usr/local/bin/grunt is being gently removed
+197 silly gentlyRm verifying /usr/local is an npm working directory
+198 silly gentlyRm containing path /usr/local is under npm's control, in /usr/local
+199 silly gentlyRm deletion target /usr/local/bin/grunt is under /usr/local
+200 verbose gentlyRm vacuuming from /usr/local/bin/grunt up to /usr/local
+201 silly vacuum-fs removing /usr/local/bin/grunt
+202 silly gentlyRm /usr/local/lib/node_modules/bower is being purged from base /usr/local
+203 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/bower
+204 silly vacuum-fs purging /usr/local/lib/node_modules/bower
+205 silly vacuum-fs quitting because other entries in /usr/local/bin
+206 info postuninstall grunt-cli@0.1.13
+207 verbose unlock done using /Users/EGGROLL/.npm/_locks/bower-e8debc5417026b57.lock for /usr/local/lib/node_modules/bower
+208 silly gentlyRm /usr/local/lib/node_modules/grunt-cli is being purged from base /usr/local
+209 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/grunt-cli
+210 silly vacuum-fs purging /usr/local/lib/node_modules/grunt-cli
+211 verbose unlock done using /Users/EGGROLL/.npm/_locks/grunt-cli-58f484dab06f0a30.lock for /usr/local/lib/node_modules/grunt-cli
+212 verbose fstream_path /usr/local/lib/node_modules/generator-aspnet
+213 verbose fstream_type Directory
+214 verbose fstream_class DirWriter
+215 verbose stack Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/generator-aspnet'
+215 verbose stack     at Error (native)
+216 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25
+216 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53
+216 verbose fstream_stack FSReqWrap.oncomplete (fs.js:82:15)
+217 verbose cwd /Library/WebServer/Documents/myAccount
+218 error Darwin 14.5.0
+219 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "yo" "grunt-cli" "generator-aspnet" "bower"
+220 error node v4.2.1
+221 error npm  v2.14.7
+222 error path /usr/local/lib/node_modules/generator-aspnet
+223 error code EACCES
+224 error errno -13
+225 error syscall mkdir
+226 error Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/generator-aspnet'
+226 error     at Error (native)
+226 error  { [Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/generator-aspnet']
+226 error   errno: -13,
+226 error   code: 'EACCES',
+226 error   syscall: 'mkdir',
+226 error   path: '/usr/local/lib/node_modules/generator-aspnet',
+226 error   fstream_type: 'Directory',
+226 error   fstream_path: '/usr/local/lib/node_modules/generator-aspnet',
+226 error   fstream_class: 'DirWriter',
+226 error   fstream_stack:
+226 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25',
+226 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53',
+226 error      'FSReqWrap.oncomplete (fs.js:82:15)' ] }
+227 error Please try running this command again as root/Administrator.
+228 verbose exit [ -13, true ]
+229 verbose unbuild lib/node_modules/generator-aspnet
+230 silly gentlyRm /usr/local/lib/node_modules/generator-aspnet is being purged from base /usr/local
+231 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/generator-aspnet
+232 verbose unbuild lib/node_modules/yo
+233 silly gentlyRm /usr/local/lib/node_modules/yo is being purged from base /usr/local
+234 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/yo
+235 verbose unbuild lib/node_modules/bower
+236 info preuninstall bower@1.7.7
+237 info uninstall bower@1.7.7
+238 verbose unbuild rmStuff bower@1.7.7 from /usr/local/lib/node_modules
+239 silly gentlyRm /usr/local/bin/bower is being gently removed
+240 silly gentlyRm verifying /usr/local is an npm working directory
+241 silly gentlyRm containing path /usr/local is under npm's control, in /usr/local
+242 silly gentlyRm deletion target /usr/local/bin/bower is under /usr/local
+243 verbose gentlyRm vacuuming from /usr/local/bin/bower up to /usr/local
+244 info postuninstall bower@1.7.7
+245 silly gentlyRm /usr/local/lib/node_modules/bower is being purged from base /usr/local
+246 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/bower
+247 silly vacuum-fs purging /usr/local/lib/node_modules/bower
+248 error error rolling back Error: EACCES: permission denied, rmdir '/usr/local/lib/node_modules/bower'
+248 error error rolling back     at Error (native)
+248 error error rolling back  { [Error: EACCES: permission denied, rmdir '/usr/local/lib/node_modules/bower']
+248 error error rolling back   errno: -13,
+248 error error rolling back   code: 'EACCES',
+248 error error rolling back   syscall: 'rmdir',
+248 error error rolling back   path: '/usr/local/lib/node_modules/bower' }

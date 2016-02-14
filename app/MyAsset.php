@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class MyAsset extends Model
 {
-    protected $fillable = array('name','income','expenditure','amount','remark');
+    protected $fillable = array('name','income','expenditure','amount','remark','category');
 
     public function user()
     {

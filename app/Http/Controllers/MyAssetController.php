@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Auth;
 use App\MyAsset;
 use App\User;
+use App\Categories;
 use App\Http\Requests\MyAssetRequest;
+use DB;
 
 class MyAssetController extends Controller
 {
@@ -21,8 +23,8 @@ class MyAssetController extends Controller
     public function index()
     {
         $lists = MyAsset::where('user_id', Auth::id())->orderBy('id', 'desc')->get();
-
-        return view('myasset.index')->withLists($lists);
+        $categories = Categories::distinct()->select('name')->where('creater_id', Auth::id())->orderBy('id', 'desc')->get();
+        return view('myasset.index')->withLists($lists)->with('category',$categories);
     }
 
     /**
@@ -33,8 +35,8 @@ class MyAssetController extends Controller
     public function create()
     {
         $lists = MyAsset::where('user_id', Auth::id())->orderBy('id', 'desc')->get();
-
-        return view('myasset.create')->withLists($lists);//
+        $categories = Categories::distinct()->select('name')->where('creater_id', Auth::id())->orderBy('id', 'desc')->get();
+        return view('myasset.create')->withLists($lists)->with('category',$categories);
     }
 
     /**
@@ -52,6 +54,7 @@ class MyAssetController extends Controller
         $total = $amount + $plus - $minus;
         $myasset = MyAsset::create(
         array('name' => $request->name,
+              'category' =>$request->category,
               'income' => $request->income,
               'expenditure' => $request->expenditure,
               'amount' => $total,
@@ -86,8 +89,8 @@ class MyAssetController extends Controller
     public function edit($id)
     {
         $myasset = MyAsset::findOrFail($id);
-
-        return view('myasset.edit')->with('myasset', $myasset);
+        $categories = Categories::distinct()->select('name')->where('creater_id', Auth::id())->orderBy('id', 'desc')->get();
+        return view('myasset.edit')->with('myasset', $myasset)->with('category',$categories);
     }
 
     /**
@@ -108,6 +111,7 @@ class MyAssetController extends Controller
       $differece = $plus - $minus;
       $myasset = MyAsset::where('id',$id)
       ->update(array('name' => $request->name,
+                     'category' => $request->category,
                      'income' => $request->income,
                      'expenditure' => $request->expenditure,
                      'amount' => $total,

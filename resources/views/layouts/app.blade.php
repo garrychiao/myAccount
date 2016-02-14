@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +13,11 @@
 
     <!-- Styles -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{asset('css/bootstrap-material-design.min.css')}}" rel="stylesheet">
+    <link href="{{asset('css/ripples.min.css')}}" rel="stylesheet">
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
+    <!--Angular datatables-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/t/dt/dt-1.10.11/datatables.min.css"/>
 
     <style>
         body {
@@ -26,7 +30,7 @@
     </style>
 </head>
 <body id="app-layout">
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-inverse">
         <div class="container">
             <div class="navbar-header">
 
@@ -78,5 +82,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
+    <script src="{{asset('js/material.min.js')}}"></script>
+    <script src="{{asset('js/ripples.min.js')}}"></script>
+    <script type="text/javascript">
+      $.material.init();
+    </script>
+    <!--Angular Test-->
+
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="{{asset('js/jquery.dataTables.min.js')}}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="{{asset('js/angular-datatables.min.js')}}"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/t/dt/dt-1.10.11/datatables.min.js"></script>
+    <script type="text/javascript">
+      angular.module('showcase', ['datatables']);
+      $(document).ready(function() {
+        $('#myasset_table').DataTable();
+      } );
+    </script>
+
 </body>
 </html>

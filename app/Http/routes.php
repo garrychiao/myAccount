@@ -41,4 +41,10 @@ Route::group(['middleware' => 'web'], function () {
 
     Route::post('/myasset/store','MyAssetController@store');
 
+    Route::resource('category','CategoryController');
+
+    Route::post('/category/store','CategoryController@store');
+
+    Route::get('/fetchtest','TestController@index');
+
 });
