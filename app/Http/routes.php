@@ -37,13 +37,13 @@ Route::group(['middleware' => 'web'], function () {
 
     Route::get('/home', 'HomeController@index');
 
-    Route::resource('myasset', 'MyAssetController');
+    Route::get('/setup', 'HomeController@setup');
 
-    Route::post('/myasset/store','MyAssetController@store');
+    Route::resource('myasset', 'MyAssetController');
 
     Route::resource('category','CategoryController');
 
-    Route::post('/category/store','CategoryController@store');
+    Route::resource('stock','StockController');
 
     Route::get('/fetchtest','TestController@index');
 

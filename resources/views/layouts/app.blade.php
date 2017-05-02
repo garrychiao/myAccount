@@ -15,6 +15,9 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{asset('css/bootstrap-material-design.min.css')}}" rel="stylesheet">
     <link href="{{asset('css/ripples.min.css')}}" rel="stylesheet">
+    <!--Full Calendar-->
+    <link href="{{asset('css/fullcalendar.min.css')}}" rel="stylesheet">
+    <!--<link href="{{asset('css/fullcalendar.print.css')}}" rel="stylesheet">-->
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
     <!--Angular datatables-->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/t/dt/dt-1.10.11/datatables.min.css"/>
@@ -49,10 +52,14 @@
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                @if (!Auth::guest())
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url('/home') }}">Home</a></li>
+                    <li><a href="{{ url('/setup') }}">Setup</a></li>
+                    <li><a href="{{ url('/myasset') }}">My Asset</a></li>
                 </ul>
+                @endif
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
@@ -87,19 +94,6 @@
     <script type="text/javascript">
       $.material.init();
     </script>
-    <!--Angular Test-->
-
-    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script src="{{asset('js/jquery.dataTables.min.js')}}"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-    <script src="{{asset('js/angular-datatables.min.js')}}"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/t/dt/dt-1.10.11/datatables.min.js"></script>
-    <script type="text/javascript">
-      angular.module('showcase', ['datatables']);
-      $(document).ready(function() {
-        $('#myasset_table').DataTable();
-      } );
-    </script>
-
+    @yield('javascript')
 </body>
 </html>

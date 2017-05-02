@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Categories extends Model
 {
-  protected $fillable = array('name','creater_id');
+  protected $fillable = array('category_name','creater_id','category_type');
 
   public function user()
   {

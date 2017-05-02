@@ -9,7 +9,7 @@
 
                 <div class="panel-body">
                     <a href="/myasset" class="btn btn-info btn-raised">View My Assets</a>
-                    <a href="/fetchtest" class="btn btn-info btn-raised">Fetch Test</a>
+                    <a href="/stock" class="btn btn-info btn-raised">Stock</a>
                 </div>
 
 

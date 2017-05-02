@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use DB;
 use Auth;
+use App\YahooStock;
 
 class TestController extends Controller
 {
@@ -22,19 +23,34 @@ class TestController extends Controller
    */
   public function index()
   {
-    $users = DB::table('categories')
-        ->join('my_assets', function ($join) {
-            $join->on('my_assets.category', '=', 'categories.id')
-                 ->where('my_assets.user_id', '=', 'categories.creater_id');
-        })->select(DB::raw('my_assets.name as name1, categories.name as name2, income, expenditure, amount'))->get();
-    //var_dump($users);
-    foreach ($users as $user) {
-      echo $user->income."<br>";
-      echo $user->expenditure."<br>";
-      echo $user->amount."<br>";
-      echo $user->name1."<br>";
-      echo $user->name2."<br><br>";
-    }
+    $objYahooStock = new YahooStock;
+
+    $objYahooStock->addFormat("snl1d1t1cvj1");
+
+
+    $objYahooStock->addStock("6575.TWO");
+    $objYahooStock->addStock("yhoo");
+    $objYahooStock->addStock("goog");
+    $objYahooStock->addStock("vgz");
+
+    return view('stock.index')->with('fetch_result',$objYahooStock->getQuotes());
+
+  }
+
+  public function create(Request $request)
+  {
+    echo $request->StockName;
+    $objYahooStock = new YahooStock;
+
+    $objYahooStock->addFormat("snl1d1t1cvj1");
+    $objYahooStock->addStock($request->StockName);
+
+    //$objYahooStock->addStock("6575.TWO");
+    //$objYahooStock->addStock("yhoo");
+    //$objYahooStock->addStock("goog");
+    //$objYahooStock->addStock("vgz");
+
+    return view('stock.index')->with('fetch_result',$objYahooStock->getQuotes());
 
   }
 }

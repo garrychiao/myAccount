@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\CategoryRequest;
 use App\Categories;
 use Auth;
 use App\MyAsset;
@@ -24,8 +23,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-      $categories = Categories::where('creater_id', Auth::id())->orderBy('id', 'desc')->get();
-      return view('category.index')->with('categories',$categories);
+
     }
 
     /**
@@ -44,16 +42,16 @@ class CategoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CategoryRequest $request)
+    public function store(Request $request)
     {
       $category = Categories::create(array(
         'creater_id'=>Auth::id(),
-        'name' => $request->name,
+        'category_name' => $request->category_name,
+        'category_type' => $request->category_type,
       ));
       $category->save();
-      $lists = MyAsset::where('user_id', Auth::id())->orderBy('id', 'desc')->get();
-      $categories = Categories::distinct()->select('name')->where('creater_id', Auth::id())->orderBy('id', 'desc')->get();
-      return view('myasset.index')->withLists($lists)->with('category',$categories);
+
+      return redirect('setup');
     }
 
     /**

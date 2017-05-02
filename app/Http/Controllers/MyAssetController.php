@@ -6,8 +6,9 @@ use Auth;
 use App\MyAsset;
 use App\User;
 use App\Categories;
-use App\Http\Requests\MyAssetRequest;
 use DB;
+use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class MyAssetController extends Controller
 {
@@ -22,9 +23,18 @@ class MyAssetController extends Controller
      */
     public function index()
     {
-        $lists = MyAsset::where('user_id', Auth::id())->orderBy('id', 'desc')->get();
-        $categories = Categories::distinct()->select('name')->where('creater_id', Auth::id())->orderBy('id', 'desc')->get();
-        return view('myasset.index')->withLists($lists)->with('category',$categories);
+        $now = Carbon::now()->addDay();
+        $twelve_months_ago = Carbon::now()->subMonths(12);
+
+        $categories = Categories::where('creater_id',Auth::id())->orderBy('id', 'asc')->get();
+        $records = MyAsset::join('categories','my_assets.category_id','=','categories.id')
+        ->select('my_assets.*','categories.category_type','categories.category_name')
+        ->where('user_id',Auth::id())
+        ->whereBetween('date', [$twelve_months_ago, $now])
+        ->orderBy('id', 'asc')->get();
+
+        $data = compact('categories','records');
+        return view('myasset.index',$data);
     }
 
     /**
@@ -34,9 +44,7 @@ class MyAssetController extends Controller
      */
     public function create()
     {
-        $lists = MyAsset::where('user_id', Auth::id())->orderBy('id', 'desc')->get();
-        $categories = Categories::distinct()->select('name')->where('creater_id', Auth::id())->orderBy('id', 'desc')->get();
-        return view('myasset.create')->withLists($lists)->with('category',$categories);
+      //
     }
 
     /**
@@ -46,23 +54,16 @@ class MyAssetController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function store(MyAssetRequest $request)
+    public function store(Request $request)
     {
-        $plus = $request->income;
-        $minus = $request->expenditure;
-        $amount = $request->amount;
-        $total = $amount + $plus - $minus;
-        $myasset = MyAsset::create(
-        array('name' => $request->name,
-              'category' =>$request->category,
-              'income' => $request->income,
-              'expenditure' => $request->expenditure,
-              'amount' => $total,
-              'remark' => $request->remark,
-            ));
-
-        $myasset->user_id = Auth::user()->id;
-        $myasset->save();
+        $category = MyAsset::create(array(
+          'user_id'=>Auth::id(),
+          'category_id' => $request->category_id,
+          'title' => $request->title,
+          'amount' => $request->amount,
+          'date' => $request->date
+        ));
+        $category->save();
 
         return redirect('/myasset');
     }

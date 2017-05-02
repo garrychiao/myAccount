@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use App\Categories;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -25,5 +27,13 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    public function setup()
+    {
+        $categories = Categories::where('creater_id',Auth::id())->orderBy('id')->get();
+        $data = compact('categories');
+
+        return view('setup',$data);
     }
 }
