@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>My Account</title>
 
     <!-- Fonts -->
@@ -20,7 +19,7 @@
     <!--<link href="{{asset('css/fullcalendar.print.css')}}" rel="stylesheet">-->
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
     <!--Angular datatables-->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/t/dt/dt-1.10.11/datatables.min.css"/>
+    <!--<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/t/dt/dt-1.10.11/datatables.min.css"/>-->
 
     <style>
         body {
@@ -32,7 +31,7 @@
         }
     </style>
 </head>
-<body id="app-layout">
+<body>
     <nav class="navbar navbar-inverse">
         <div class="container">
             <div class="navbar-header">

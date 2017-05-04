@@ -48,6 +48,7 @@ class CategoryController extends Controller
         'creater_id'=>Auth::id(),
         'category_name' => $request->category_name,
         'category_type' => $request->category_type,
+        'color_code' => $request->color_code,
       ));
       $category->save();
 
@@ -62,7 +63,10 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
-        //
+        $category = Categories::where('id',$id)->first();
+        $data = compact('category');
+
+        return view('category.index',$data);
     }
 
     /**
@@ -85,7 +89,14 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        /*Categories::where('id',$id)->update([
+          'category_name' => $request->category_name,
+          'category_type' => $request->category_type,
+          'color_code' => $request->color_code,
+        ]);*/
+        echo $request->category_name;
+        //return redirect('setup');
+
     }
 
     /**
@@ -99,7 +110,6 @@ class CategoryController extends Controller
       $category = Categories::find($id);
       $category->delete();
 
-      return \Redirect::route('category.index')
-          ->with('message', 'Task deleted!');
+      return redirect('setup');
     }
 }
